@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Tic Tac Toe
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+           
+                    
+ @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }          
+            html{
+                -moz-box-sizing:border-box;box-sizing:border-box}.neave{-moz-box-sizing:content-box;box-sizing:content-box
+            }
+            *,*:before,*:after{
+                -moz-box-sizing:inherit;box-sizing:inherit}body{margin:0;background-color: #33D7FF;color:#fff;font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%
+            }
+            
+          .o{
+              left:16.666666667%;top:16.666666667%;width:66.666666667%;height:66.666666667%;-webkit-border-radius:50%;
+              -moz-border-radius:50%;border-radius:50%;border:20px solid #5D6D7E
+            }
+            .x{width:100%;height:100%}
+            .square .x,.square .o{
+                position:relative;will-change:transform;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);
+                -webkit-animation:appear .2s cubic-bezier(.5,1.8,.1,1.1);-moz-animation:appear .2s cubic-bezier(.5,1.8,.1,1.1);
+                animation:appear .2s cubic-bezier(.5,1.8,.1,1.1)
+            }
+            .x:before,.x:after{position:absolute;content:"";display:block;background-color:#FF3333;left:90px;top:20px;width:20px;height:160px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.x:before{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg)}
+            .x:after{-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg)}
+            
+            
+            .square{
+                float:left;
+                width:33.333333333%;
+                height:33.333333333%;
+                cursor:pointer;
+                border-width:10px;
+                border-color:#000;
+                
+            }
+            
+            .square.top{border-bottom-style:solid}
+            .square.bottom{border-top-style:solid}
+            .square.left{clear:both;border-right-style:solid}
+            .square.right{border-left-style:solid}
+            
+        
+            .board { 
+                   width:100%;
+                height:100%;
+                  
+                   }
+            
+            
+          .game{position:absolute;top:50%;left:50%;width:600px;height:600px;margin-left:-300px;margin-top:-290px;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;tap-highlight-color:transparent}
+            
+            
+            .bcd{
+                color: #FF3333;
+            }
+            
+             .bpl{
+                color: #5D6D7E;
+            }
+            
+            #kgp{
+                display:inline-flex;
+                white-space:pre;
+                margin-top: -350px;
+                top:50%;
+                left:50%;
+                position: absolute;
+                margin-left:-50px;
+}
+       
+            .aja{
+                float:right;
+               
+               height: -100px;
+                position:absolute;left:50%;top:50%;margin-left:350px;margin-top:-100px;text-align:center;
+            }
+           
+            .iot{
+                float:left;
+                position:absolute;left:50%;top:50%;margin-left:-550px;margin-top:-50px;
+            }
+            
+            .btn1{
+                padding:10px 10px;
+                font-size: 15px;
+                font-family:serif;
+                background-color: #FF3333;
+                border-radius: 10px;
+                width:150px;
+            }
+            .btn1:hover{
+                background-color: firebrick;
+            }
+           
+            .selected{
+                background-color: firebrick;
+            }
+        </style>
+        
+        
+    </head>
+    <body>
+        
+       
+             <div class="game">
+                
+            <div class="board" id="image">
+				<div class="square top left" id="i1"><div class="abc"></div></div>
+				<div class="square top" id="i2"><div class="abc"></div></div>
+				<div class="square top right" id="i3"><div class="abc"></div></div>
+				<div class="square left" id="i4"><div class="abc"></div></div>
+				<div class="square" id="i5"><div class="abc"></div></div>
+				<div class="square right" id="i6"><div class="abc"></div></div>
+				<div class="square bottom left" id="i7"><div class="abc"></div></div>
+				<div class="square bottom" id="i8"><div class="abc"></div></div>
+				<div class="square bottom right" id="i9"><div class="abc"></div></div>
+			</div>    
+        </div>
+            
+                
+       
+    <center>
+        <div id="kgp"><h1 id="ghi" class="bcd bpl"></h1><h1 id="fil"></h1></div>
+        
+        </center>
+ 
+       
+       <table class="aja" width="300">
+           
+            <tr>
+              <th class="bcd" style="font-size:40px;">X</th>
+              <th class="bpl" style="font-size:40px;">O</th>
+                <th style="font-size:40px;">Tie</th>
+           </tr>
+           <tr>
+           <td style="font-size:35px;" id="scorex">0</td>
+           <td style="font-size:35px;" id="scoreo">0</td>
+               <td style="font-size:35px;" id="scoretie">0</td>
+           </tr>
+        
+        </table>
+       
+        <div class="iot">
+            <button class="btn1 " id="ai" >One Player</button><p></p>
+            <button class="btn1 " id="noai">Two Players</button>
+        </div>
+        
+       <script src="noai.js"></script>
+        
+        <script src="ai.js"></script>
+    </body>
+</html>
