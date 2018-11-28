@@ -1,52 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-<meta charset="UTF-8">
         <title>
-            Tic Tac Toe - Play Tic-Tac-Toe online for free
+            Tic Tac Toe
         </title>
-
-<meta name="description" content="Play the Tic-Tac-Toe game online for free with computer or two players.">
-<meta name="author" content="Arihant">
-<meta name="keywords" content="play,enjoy,fun,AI,friend,computer,noughts and crosses,game,childhood,expert,unbeatable,Artificial Intelligence,online,web,internet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="application-name" content="Tic-Tac-Toe">
-<meta name="msapplication-tooltip" content="Tic-Tac-Toe">
-<meta name="theme-color" content="#33D7FF">
-<meta property="og:type" content="website">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<meta name="google-site-verification" content="ZI8KvjcSip58kHSKXMvYxBwcCYVC9MrsDCVe9Uk1yf8" />
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126656052-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-126656052-1');
-</script>
-
-
-</script>
-
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-
         <style>
            
                     
@@ -66,14 +24,19 @@
             }
             .x{width:100%;height:100%}
             .square .x,.square .o{
-                position:relative;will-change:transform;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);
-                -webkit-animation:appear .2s cubic-bezier(.5,1.8,.1,1.1);-moz-animation:appear .2s cubic-bezier(.5,1.8,.1,1.1);
+                position:relative;
                 animation:appear .2s cubic-bezier(.5,1.8,.1,1.1)
+                   
             }
-            .x:before,.x:after{position:absolute;content:"";display:block;background-color:#FF3333;left:90px;top:20px;width:20px;height:160px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.x:before{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg)}
-            .x:after{-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg)}
-            
-            
+            .x:before,.x:after{position:absolute;content:"";display:block;background-color:#FF3333;left:90px;top:20px;width:20px;height:160px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}
+            .x:before{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg);}
+            .x:after{-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);transform:rotate(45deg);}
+           
+            @keyframes appear{
+                from{transform: scale(.3)}
+                to{transform: scale(1)}
+            }
+           
             .square{
                 float:left;
                 width:33.333333333%;
